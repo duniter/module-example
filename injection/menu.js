@@ -7,7 +7,6 @@
    * rml9-web-module code
    */
 
-  var openNewTab = window.openNewTab
   var mainWindow = window.mainWindow
 
   window.uiModules['rml9-web-module'] = {
@@ -21,7 +20,7 @@
     var webModuleHeight = parseInt(localStorage.getItem('rml9_web_module_height')) || 1000;
     var webModuleWidth = parseInt(localStorage.getItem('rml9_web_module_width')) || 1400;
 
-    openNewTab (window.location.origin + '/rml9-web-module/index.html', {
+    window.openModule ('/rml9-web-module/index.html', {
       position: 'center',
       height: webModuleHeight,
       width: webModuleWidth,
